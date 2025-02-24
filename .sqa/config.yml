@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/john-shepherdson/eosc.node-registry.demo:
+      branch: main
+      repo: https://github.com/john-shepherdson/eosc.node-registry.demo.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/john-shepherdson/eosc.node-registry.demo git:
+        commands:
+        - /usr/bin/env sh .sqa/script.hilly-asparagus-malamute.sh
+        container: qc.acc_fuzzy-olivine-quail
+  QC.Doc:
+    repos:
+      github.com/john-shepherdson/eosc.node-registry.demo find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-purple-barb.sh
+        container: qc.doc_woolly-heliotrope-bulldog
+      github.com/john-shepherdson/eosc.node-registry.demo git:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-smalt-guppy.sh
+        container: qc.doc_scanty-wisteria-chow
+      github.com/john-shepherdson/eosc.node-registry.demo markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-beige-grasshopper.sh
+        container: qc.doc_paltry-cobalt-fossa
+  QC.Lic:
+    repos:
+      github.com/john-shepherdson/eosc.node-registry.demo licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.snazzy-ivory-chihuahua.sh
+        container: qc.lic_blurry-chestnut-woodpecker
+  QC.Met:
+    repos:
+      github.com/john-shepherdson/eosc.node-registry.demo cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-heliotrope-centipede.sh
+        container: qc.met_lumpy-celadon-chow
+  QC.Sty:
+    repos:
+      github.com/john-shepherdson/eosc.node-registry.demo checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-auburn-albatross.sh
+        container: qc.sty_cloudy-magnolia-caterpillar
+      github.com/john-shepherdson/eosc.node-registry.demo hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-bistre-tetra.sh
+        container: qc.sty_ugly-firebrick-clam
+  QC.Ver:
+    repos:
+      github.com/john-shepherdson/eosc.node-registry.demo get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-cerise-caracal.sh
+        container: qc.ver_gamy-corn-frigatebird
+timeout: 5400
