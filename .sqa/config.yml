@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/john-shepherdson/eosc.node-registry.demo git:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-turquoise-chin.sh
-        container: qc.acc_whiny-orange-earwig
+        - /usr/bin/env sh .sqa/script.geeky-ivory-raccoon.sh
+        container: qc.acc_blurry-green-cuttlefish
   QC.Doc:
     repos:
       github.com/john-shepherdson/eosc.node-registry.demo find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-razzmatazz-meerkat.sh
-        container: qc.doc_breezy-green-mongoose
+        - /usr/bin/env sh .sqa/script.wiggy-amethyst-deer.sh
+        container: qc.doc_sloppy-cerise-devil
       github.com/john-shepherdson/eosc.node-registry.demo git:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-brass-cougar.sh
-        container: qc.doc_blurry-blue-dog
+        - /usr/bin/env sh .sqa/script.fuzzy-zucchini-zonkey.sh
+        container: qc.doc_breezy-red-seal
       github.com/john-shepherdson/eosc.node-registry.demo markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-myrtle-corgi.sh
-        container: qc.doc_crappy-orange-whippet
+        - /usr/bin/env sh .sqa/script.bumpy-lemon-macaque.sh
+        container: qc.doc_pokey-cerulean-serval
   QC.Lic:
     repos:
       github.com/john-shepherdson/eosc.node-registry.demo licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-lemon-rattlesnake.sh
-        container: qc.lic_woolly-zucchini-scorpion
+        - /usr/bin/env sh .sqa/script.lanky-coral-rhinoceros.sh
+        container: qc.lic_scaly-pear-bird
   QC.Met:
     repos:
       github.com/john-shepherdson/eosc.node-registry.demo cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-cornflower-foxhound.sh
-        container: qc.met_lousy-grey-quokka
+        - /usr/bin/env sh .sqa/script.flaky-smalt-abyssinian.sh
+        container: qc.met_boozy-purple-bat
   QC.Sty:
     repos:
       github.com/john-shepherdson/eosc.node-registry.demo checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-myrtle-wolf.sh
-        container: qc.sty_beady-indigo-dolphin
+        - /usr/bin/env sh .sqa/script.chummy-smalt-caiman.sh
+        container: qc.sty_woozy-russet-chinook
       github.com/john-shepherdson/eosc.node-registry.demo hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-mustard-setter.sh
-        container: qc.sty_stinky-vermilion-coral
+        - /usr/bin/env sh .sqa/script.tacky-bistre-bird.sh
+        container: qc.sty_stealthy-xanthic-leopard
   QC.Ver:
     repos:
       github.com/john-shepherdson/eosc.node-registry.demo get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-red-newt.sh
-        container: qc.ver_whiny-eggplant-macaque
+        - /usr/bin/env sh .sqa/script.tasty-wheat-dragonfly.sh
+        container: qc.ver_hazy-cerulean-insect
 timeout: 5400
